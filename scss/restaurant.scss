@@ -1,0 +1,94 @@
+
+.restaurant {
+  width: 308px;
+  padding-bottom: 20px;
+  transition: all 1s;
+
+  &:hover {
+    transform: scale(1.04, 1.04);
+  }
+
+  &__preview-wrapper {
+    margin-bottom: 16px;
+  }
+
+  &__preview {
+    width: 100%;
+    height: 256px;
+    object-fit: cover;
+  }
+
+  &__title-link {
+    text-decoration: none;
+    color: #1d1d1d;
+  }
+
+  &__title {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    margin: 0;
+    margin-bottom: 4px;
+  }
+  
+  &__tags {
+    list-style: none;
+    padding: 0 0px;
+    display: flex;
+    margin: 0;
+    margin-bottom: 4px;
+  }
+  
+  &-info  {
+    position: relative;
+    font-size: 14px;
+    line-height: 21px;
+    color: #626262;
+    padding-left: 12px;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+
+  &-info:hover {
+    color: #57ad57;
+  }
+
+  &-info:first-child {
+    padding-left: 0;
+  }
+
+  &-info:not(:first-child) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  &-info:not(:first-child)::before {
+    position: absolute;
+    content: '•';
+    color: #626262;
+    top: 2px;
+    left: 3px;
+  }
+  
+  &__cooking-time {
+    font-size: 13px;
+    line-height: 21px;
+    margin: 0;
+    cursor: pointer;
+  }
+
+  &__cooking-time:hover {
+    color: #57ad57;
+  }
+
+  @media (max-width: 1023px) {
+    & {
+      width: 100%;
+    }
+
+    &__preview {
+      width: 100%;
+      height: 256px;
+    }
+  }
+}
